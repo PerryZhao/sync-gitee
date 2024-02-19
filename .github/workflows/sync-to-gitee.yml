@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          remote_repo="https://${{ vars.GITEE_USERNAME }}:${{ secrets.GITEE_PAT }}@gitee.com/perryzhao/sync-gitee.git"
+          remote_repo="https://${{ secrets.GITEE_NAME }}:${{ secrets.GITEE_PAT }}@gitee.com/${{ env.GITEE_REPOSITORY }}.git"
           git remote add gitee "${remote_repo}"
           branch=$(git branch --show-current)
           git push gitee $branch -f
