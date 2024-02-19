@@ -1,1 +1,1 @@
-# sync-gitee
+# sync-to-gitee
