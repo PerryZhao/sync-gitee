@@ -1,6 +1,7 @@
 name: Sync to Gitee
 run-name: "[${{ github.workflow }}] - ${{ github.event.head_commit.message }}"
 
+
 on:
   push:
     branches:
@@ -15,6 +16,7 @@ env:
 jobs:
   sync_to_gitee:
     runs-on: ubuntu-latest
+    if: github.repository == 'PerryZhao/sync-gitee'
     steps:
       - uses: actions/checkout@v4
         with:
